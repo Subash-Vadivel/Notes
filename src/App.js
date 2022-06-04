@@ -5,8 +5,10 @@ import Search from './components/Search';
 import Header from './components/Header';
 function App() {
   const[notes,setnotes]=useState(
-    JSON.parse(localStorage.getItem('data'))
-    
+   [ {id:nanoid(),
+      text:"hello",
+      date:"24/09/2002",
+    },]
 );
 
 
@@ -18,6 +20,10 @@ useEffect(() => {
   );
 }, [notes]);
 
+useEffect(() => {
+  const d=JSON.parse(localStorage.getItem('data'));
+  setnotes(d);
+}, []);
 
 
 const [searchText,setSearchText]=useState('');
