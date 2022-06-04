@@ -2,7 +2,6 @@ import Noteslist from './components/Noteslist';
 import {useEffect, useState} from 'react';
 import {nanoid} from 'nanoid';
 import Search from './components/Search';
-import note from './components/Note';
 import Header from './components/Header';
 function App() {
   const[notes,setnotes]=useState(
