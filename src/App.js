@@ -5,9 +5,9 @@ import Search from './components/Search';
 import Header from './components/Header';
 function App() {
   const[notes,setnotes]=useState(
-    (JSON.parse(localStorage.getItem('data')))?JSON.parse(localStorage.getItem('data')):{id:nanoid(),
+    (JSON.parse(localStorage.getItem('data')))?JSON.parse(localStorage.getItem('data')):([{id:nanoid(),
     text:"Create your First Note",
-    date:"01/06/2022",},
+    date:"01/06/2022",}])
      
    
 );
